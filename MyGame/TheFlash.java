@@ -1,45 +1,48 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class TheFlash here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class TheFlash extends World
 {
 
     /**
-     * Constructor for objects of class TheFlash.
-     * 
+     * Constructor: Set up the starting objects.
      */
     public TheFlash()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
         prepare();
     }
-     
 
     /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
+     * Create new floating objects at irregular intervals.
+     */
+    public void act()
+    {
+        if (Greenfoot.getRandomNumber(10) < 4)
+        {
+            addObject(new ground(), 799, 540);
+        }
+    }
+    
+    /**
+     * Prepare the world for the start of the program. In this case: Create
+     * a white blood cell and the lining at the edge of the blood stream.
      */
     private void prepare()
     {
         ground ground = new ground();
-        addObject(ground,63,535);
+        addObject(ground,63,540);
         ground ground2 = new ground();
-        addObject(ground2,188,535);
+        addObject(ground2,188,540);
         ground ground3 = new ground();
-        addObject(ground3,314,535);
+        addObject(ground3,314,540);
         ground ground4 = new ground();
-        addObject(ground4,438,535);
+        addObject(ground4,438,540);
         ground ground5 = new ground();
-        addObject(ground5,563,535);
+        addObject(ground5,563,540);
         ground ground6 = new ground();
-        addObject(ground6,690,535);
+        addObject(ground6,690,540);
         ground ground7 = new ground();
-        addObject(ground7,799,535);
+        addObject(ground7,799,540);
     }
 }

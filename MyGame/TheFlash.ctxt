@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=TheFlash
-comment0.text=\n\ Write\ a\ description\ of\ class\ TheFlash\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=TheFlash()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ TheFlash.\n\ \n
+comment1.text=\n\ Constructor\:\ Set\ up\ the\ starting\ objects.\n
 comment2.params=
-comment2.target=void\ prepare()
-comment2.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
-numComments=3
+comment2.target=void\ act()
+comment2.text=\n\ Create\ new\ floating\ objects\ at\ irregular\ intervals.\n
+comment3.params=
+comment3.target=void\ prepare()
+comment3.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ In\ this\ case\:\ Create\n\ a\ white\ blood\ cell\ and\ the\ lining\ at\ the\ edge\ of\ the\ blood\ stream.\n
+numComments=4

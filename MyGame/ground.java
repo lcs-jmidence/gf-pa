@@ -16,7 +16,7 @@ public class ground extends Actor
     {
         setLocation(getX()-10, getY());
         
-        if (getX() == -1) 
+        if (getX() == 0) 
         {
             getWorld().removeObject(this);
         }
