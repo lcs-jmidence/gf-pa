@@ -22,7 +22,7 @@ public class TheFlash extends World
         {
             addObject(new ground(), 799, 540);
         }
-         if (Greenfoot.getRandomNumber(100) < 5)
+         if (Greenfoot.getRandomNumber(100) < 3)
         {
             addObject(new Death(), 799, Greenfoot.getRandomNumber(540));
         }

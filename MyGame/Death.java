@@ -14,11 +14,18 @@ public class Death extends Actor
      */
     public void act() 
     {
+        KillRunner();
         setLocation(getX()-5, getY());
-        
         if (getX() == 0) 
         {
             getWorld().removeObject(this);
         }
-    }    
+    }
+    public void KillRunner()
+    {
+        if ( isTouching(runner.class) ) 
+        {
+          Greenfoot.stop();
+        }
+    }
 }
