@@ -44,5 +44,7 @@ public class TheFlash extends World
         addObject(ground6,690,540);
         ground ground7 = new ground();
         addObject(ground7,799,540);
+        runner runner = new runner();
+        addObject(runner,50,427);
     }
 }
