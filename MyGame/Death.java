@@ -14,6 +14,11 @@ public class Death extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        setLocation(getX()-5, getY());
+        
+        if (getX() == 0) 
+        {
+            getWorld().removeObject(this);
+        }
     }    
 }
