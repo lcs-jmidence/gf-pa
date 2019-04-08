@@ -11,6 +11,7 @@ public class TheFlash extends World
     {    
         super(800, 600, 1); 
         prepare();
+        setPaintOrder(runner.class, ground.class);
     }
 
     /**
@@ -24,7 +25,7 @@ public class TheFlash extends World
         }
          if (Greenfoot.getRandomNumber(100) < 3)
         {
-            addObject(new Death(), 799, Greenfoot.getRandomNumber(540));
+            addObject(new Death(), 799, Greenfoot.getRandomNumber(200)+300);
         }
     }
     
@@ -49,6 +50,6 @@ public class TheFlash extends World
         ground ground7 = new ground();
         addObject(ground7,799,540);
         runner runner = new runner();
-        addObject(runner,50,427);
+        addObject(runner,50,430);
     }
 }

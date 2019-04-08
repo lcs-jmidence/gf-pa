@@ -34,6 +34,18 @@ public class runner extends Actor
         {
             setImage(image1);
         }
+        
+        if (Greenfoot.isKeyDown("down")) 
+        {
+            getImage().scale(72, 50);
+        } else {
+            getImage().scale(72, 102);
+        }
+        
+        if (isTouching(ground.class))
+        {
+            setLocation(getX(), getY() - 6);
+        }
         //gravity--;
         //setLocation(getX(), getY() - gravity);
         //CheckForJump();
@@ -51,7 +63,7 @@ public class runner extends Actor
         {
             move(6);
         }
-        if (Greenfoot.isKeyDown("down")) 
+          if (Greenfoot.isKeyDown("down")) 
         {
             setLocation(getX(), getY()+6);
         }
