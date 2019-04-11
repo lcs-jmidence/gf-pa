@@ -19,13 +19,13 @@ public class TheFlash extends World
      */
     public void act()
     {
-        if (Greenfoot.getRandomNumber(10) < 4)
+        if (Greenfoot.getRandomNumber(10) < 5)
         {
             addObject(new ground(), 799, 540);
         }
-         if (Greenfoot.getRandomNumber(100) < 3)
+         if (Greenfoot.getRandomNumber(100) < 1.5)
         {
-            addObject(new Death(), 799, Greenfoot.getRandomNumber(200)+300);
+            addObject(new Death(), 799, Greenfoot.getRandomNumber(180)+270);
         }
     }
     
