@@ -23,9 +23,10 @@ public class Death extends Actor
     }
     public void KillRunner()
     {
-        //if ( isTouching(runner.class) ) 
+        if ( isTouching(runner.class) ) 
         {
-          //Greenfoot.stop();
+          removeTouching(runner.class);
+          Greenfoot.stop();
         }
     }
 }

@@ -1,6 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public class TheFlash extends World
 {
 
@@ -23,12 +22,12 @@ public class TheFlash extends World
         {
             addObject(new ground(), 799, 540);
         }
-         if (Greenfoot.getRandomNumber(100) < 1.5)
+        if (Greenfoot.getRandomNumber(100) < 0.8)
         {
             addObject(new Death(), 799, Greenfoot.getRandomNumber(180)+270);
         }
     }
-    
+
     /**
      * Prepare the world for the start of the program. In this case: Create
      * a white blood cell and the lining at the edge of the blood stream.
