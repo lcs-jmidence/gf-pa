@@ -2,6 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class TheFlash extends World
 {
+    private boolean FirstTimeRun;
+    public boolean GameOn;
 
     /**
      * Constructor: Set up the starting objects.
@@ -11,6 +13,8 @@ public class TheFlash extends World
         super(800, 600, 1); 
         prepare();
         setPaintOrder(runner.class, ground.class);
+        FirstTimeRun = true;
+        GameOn = false;
     }
 
     /**
@@ -18,14 +22,69 @@ public class TheFlash extends World
      */
     public void act()
     {
+        LookForGameStart();
+        if (FirstTimeRun)
+        {
+            HowToPlay();
+        }
+        else if (GameOn)
+        {
+            TrackScore();
+            AddObjects();
+        }
+    }
+
+    public boolean isGameOn()
+    {
+        return GameOn;
+    }
+
+    private void AddObjects()
+    {
         if (Greenfoot.getRandomNumber(10) < 5)
         {
             addObject(new ground(), 799, 540);
         }
-        if (Greenfoot.getRandomNumber(100) < 0.8)
+        if (Greenfoot.getRandomNumber(100) < 0.95)
         {
             addObject(new Death(), 799, Greenfoot.getRandomNumber(180)+270);
         }
+    }
+
+    private void LookForGameStart()
+    {
+        if (Greenfoot.isKeyDown("up") && !GameOn)
+        {
+            StartGame();
+        }
+    }
+
+    private void StartGame()
+    {
+        FirstTimeRun = false;
+        GameOn = true;
+        HideHowToPlay();
+    }
+
+    private void TrackScore()
+    {
+
+    }
+
+    private void HowToPlay()
+    {
+        showText("Welcome to Koala Jump", 400, 100);
+        showText("Use arrows for movement and space to jump", 400, 200);
+        showText("Don't touch the red diamonds", 400, 300);
+        showText("Press Up Arrow to begin.", 400, 400);
+    }
+    
+    private void HideHowToPlay()
+    {
+        showText("", 400, 100);
+        showText("", 400, 200);
+        showText("", 400, 300);
+        showText("", 400, 400);
     }
 
     /**
